@@ -1,17 +1,21 @@
-import React from 'react';
+import { useState} from 'react';
+import MoviesContext  from './context/MoviesContext';
 import './App.css';
 
-import { Header, Main  } from './containers';
-import { Navbar } from './components';
+import { Header, Main } from './containers';
+
 
 function App() {
+  const [movies, setMovies] = useState([])
 
   return (
-    <div>
-      <Navbar />
-      <Header/>
+    <MoviesContext.Provider value={{
+      movies,
+      setMovies
+    }}>
+      <Header />
       <Main />
-    </div>
+    </MoviesContext.Provider>
   );
 }
 

@@ -42,25 +42,7 @@
     transition: transform 0.3s;
 }
 
-form {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
 
-.search-input {
-    width: 240px;
-    height: 30px;
-    border-radius: 3px;
-    padding: 6px 15px 6px 5px;
-    border: 1px solid #DDD;
-    box-shadow: 0 0 0 inset;
-    outline: none;
-    line-height: 18px;
-    font-size: 14px;
-    color: #fff;
-    background: #2f364a;
-}
 
 .authorization {
     color: #fff;

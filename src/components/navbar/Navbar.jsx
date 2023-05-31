@@ -1,5 +1,6 @@
 import React from 'react'
 import './navbar.css';
+import Search from '../search/Search';
 
 const Navbar = () => {
     return (
@@ -21,10 +22,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-            <form method="get" action="/search">
-                <input className='search-input' type="text" id="search-input" name="search" placeholder="Movie search..." />
-                <button type="submit">Find</button>
-            </form>
+           <Search />
             <div className='authorization'>
                 Authorization
             </div>
