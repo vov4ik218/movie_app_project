@@ -1,25 +1,34 @@
-
+import { Link } from 'react-router-dom';
 import './moviecard.css';
 
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
-const Moviecard = ({ title, poster_path, vote_average, release_date, overview }) => {
+const MovieCard = ({ title, poster_path, vote_average, release_date, overview }) => {
+
+  const queryParams = new URLSearchParams({
+    title,
+    poster_path,
+    vote_average,
+    release_date,
+    overview
+  });
+
+  const filmPageUrl = `/film?${queryParams.toString()}`;
 
   return (
-    <div className='film-container'>
-      <div className='card'>
-        <a className='card-img__wrapper' href='/some/valid/uri'>
+    <div className='card'>
+      <Link to={filmPageUrl}>
+        <div className='card-img__wrapper'>
           <img src={API_IMG + poster_path} alt='img film'></img>
-        </a>
-        <a className='card__name' href='/some/valid/uri'>{title}</a>
-        <div className='card__options'>
-        <a className='card__release' href='/some/valid/uri'>Release date: {release_date},</a>
-          <a className='card__average' href='/some/valid/uri' >{vote_average}★</a>
         </div>
-      </div>
-      
+        <div className='card__name'>{title}</div>
+        <div className='card__options'>
+          <div className='card__release'>Release date: {release_date}</div>
+          <div className='card__average'>{vote_average}★</div>
+        </div>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Moviecard;
+export default MovieCard;

@@ -5,7 +5,7 @@ import Search from '../search/Search';
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <h2 className='navbar__logo'>ex-fs.net</h2>
+            <a href="/home"><h2 className='navbar__logo'> ex-fs.net</h2></a>
             <nav className='nav__list'>
                 <ul className='list'>
                     <li className='list__item'>

@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import  MoviesContext  from '../../context/MoviesContext';
 import './search.css';
+import search from '../../assets/search.png';
 
 
 const Search = () => {
@@ -28,7 +29,7 @@ const Search = () => {
 
     return (
         <div>
-            <form method="get" action="/search" onSubmit={searchMovie} autoComplete="off">
+            <form className='form-search' method="get" action="/search" onSubmit={searchMovie} autoComplete="off">
                 <input className='search-input'
                     type="text"
                     id="search-input"
@@ -36,7 +37,8 @@ const Search = () => {
                     aria-label="search"
                     name="query"
                     value={query} onChange={changeHandler}/>
-                <button type="submit" variant="secondary">Find</button>
+                <input className='search-img' type="submit" variant="secondary"/>
+                <img src={search} alt="search-img" />
             </form>
         </div>
     )

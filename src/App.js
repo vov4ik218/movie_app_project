@@ -1,8 +1,11 @@
-import { useState} from 'react';
-import MoviesContext  from './context/MoviesContext';
+import { useState } from 'react';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import MoviesContext from './context/MoviesContext';
 import './App.css';
 
-import { Header, Main } from './containers';
+import { Header, Footer } from './containers';
+import AppRouter from './components/appRouter/AppRouter';
 
 
 function App() {
@@ -13,8 +16,12 @@ function App() {
       movies,
       setMovies
     }}>
-      <Header />
-      <Main />
+      <Router>
+        <Header />
+        <AppRouter />
+        <Footer />
+      </Router>
+
     </MoviesContext.Provider>
   );
 }

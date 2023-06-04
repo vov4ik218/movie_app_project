@@ -1,7 +1,8 @@
-form {
+.form-search {
     display: flex;
     align-items: center;
     gap: 5px;
+    position: relative;
 }
 
 .search-input {
@@ -16,4 +17,25 @@ form {
     font-size: 14px;
     color: #fff;
     background: #2f364a;
+}
+
+.search-img {
+    position: absolute; 
+    right: 0;
+    transform: translateX(-50%);
+    width:20px;
+    height:20px;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.form-search img {
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
 }

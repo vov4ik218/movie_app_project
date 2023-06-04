@@ -1,4 +1,4 @@
-.main {
+.main-container {
     max-width: 1170px;
     margin: 0 auto;
     justify-items: center;
@@ -6,4 +6,33 @@
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(5, 1fr);
     grid-row-gap: 30px;
+}
+
+
+
+.find-error-content {
+    max-width: 990px;
+    background: #2f364a;
+    margin: 5px auto;
+    border-radius: 3px;
+    padding: 5px 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #78829d;
+}
+
+.find-error-content h2 {
+    display: block;
+    font-size: 19px;
+    text-align: center;
+    color: rgb(120, 130, 157);
+    box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.5);
+    padding: 0 0 8px 0;
+    margin: 0 0 8px 0;
+}
+
+.loading-main {
+    width: 100vh;
+    height: 200vh;
+    color: #2f364a;
 }
