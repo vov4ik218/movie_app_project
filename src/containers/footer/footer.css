@@ -1,6 +1,8 @@
 .footer {
     width: 100%;
     background-color: #2f364a;
+
+    flex-shrink: 0;
 }
 
 .footer-content {

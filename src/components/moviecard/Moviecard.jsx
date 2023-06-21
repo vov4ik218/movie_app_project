@@ -3,18 +3,26 @@ import './moviecard.css';
 
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
-const MovieCard = ({ title, poster_path, vote_average, release_date }) => {
+const MovieCard = (movie) => {
+
+  const { title, poster_path, vote_average, release_date, overview, popularity, vote_count } = movie;
 
   const queryParams = new URLSearchParams({
     title,
-    release_date
+    poster_path,
+    vote_average,
+    release_date,
+    overview,
+    popularity,
+    vote_count
   });
 
   const filmPageUrl = `/film?${queryParams.toString()}`;
+  // const filmPageUrl = `/film?title=${title}&release_date=${release_date}`;
 
   return (
-    <Link to={filmPageUrl}>
-      <div className='card'>
+    <div className='card'>
+      <Link to={filmPageUrl}>
         <div className='card-img__wrapper'>
           <img src={API_IMG + poster_path} alt='img film'></img>
         </div>
@@ -23,8 +31,8 @@ const MovieCard = ({ title, poster_path, vote_average, release_date }) => {
           <div className='card__release'>Release date: {release_date}</div>
           <div className='card__average'>{vote_average}★</div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

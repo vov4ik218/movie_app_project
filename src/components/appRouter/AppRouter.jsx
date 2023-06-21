@@ -1,21 +1,17 @@
-import { useContext } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import MoviesContext from '../../context/MoviesContext';
-
+// import {MoviesContext} from '../../context/MoviesContext';
 import Main from '../../containers/main/Main';
 import FilmPage from '../filmPage/FilmPage';
+// import Search from '../../components/search/Search';
 
 const AppRouter = () => {
-  const { movie } = useContext(MoviesContext);
-  
+
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/film" element={<FilmPage {...movie}/>} />
-
-
-
-
+      <Route path='/' element={<Main />} />
+      <Route path='/film' element={<FilmPage />} />
+      {/* <Route path='/search' element={<Search />} /> */}
     </Routes>
   );
 };

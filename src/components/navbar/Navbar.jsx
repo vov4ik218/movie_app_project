@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './navbar.css';
 import Search from '../search/Search';
 
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <a href="/home"><h2 className='navbar__logo'> ex-fs.net</h2></a>
+            <Link to="/">
+                <h2 className='navbar__logo'>ex-fs.net</h2>
+            </Link>
             <nav className='nav__list'>
                 <ul className='list'>
                     <li className='list__item'>
@@ -22,7 +25,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-           <Search />
+            <Search />
             <div className='authorization'>
                 Authorization
             </div>

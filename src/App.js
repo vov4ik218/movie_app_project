@@ -1,27 +1,21 @@
-import { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import MoviesContext from './context/MoviesContext';
 import { Header, Footer } from './containers';
 import AppRouter from './components/appRouter/AppRouter';
 import './App.css';
+import { MoviesProvider } from './context/MoviesContext';
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const[movie, setMovie] = useState({});
-
   return (
-    <MoviesContext.Provider value={{
-      movies,
-      setMovies,
-      movie,
-      setMovie
-    }}>
-      <Router>
-        <Header />
-        <AppRouter />
-        <Footer />
-      </Router>
-    </MoviesContext.Provider>
+    <div className='container'>
+      <MoviesProvider>
+        <Router>
+          <Header />
+          <AppRouter />
+          <Footer />
+        </Router>
+      </MoviesProvider>
+    </div>
   );
 }
 

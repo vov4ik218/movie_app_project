@@ -1,4 +1,30 @@
 .film-page {
-    width:100%;
-    background-color: #a19aa8;
+    width: 100%;
+
+}
+
+.film-page_title {
+    line-height: 30px;
+    font-size: 25px;
+}
+
+.film-page-info {
+    display: flex;
+}
+
+.card-img__wrapper {
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+
+.card-img__wrapper img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+.film-page__overview {
+    font-size: 18px;
+    padding: 0 0 0 20px;
+    max-width: 680px;
 }
